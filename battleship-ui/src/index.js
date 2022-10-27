@@ -1,5 +1,5 @@
 import React from 'react';
-import './styles/style.css';
+import './styles/style.scss';
 import ReactDOM from 'react-dom/client';
 import Game from './Core/Game.js'
 import reportWebVitals from './reportWebVitals';

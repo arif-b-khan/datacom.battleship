@@ -1,12 +1,25 @@
-import React from 'react'
+import React from 'react';
+import { generateEmptyLayout } from './layoutHelpers';
 
 function Game() {
+    let gameLayout = generateEmptyLayout();
+    let compSquares = gameLayout.map((square, idx) => {
+        return <div className={square} key={`comp` + idx} id={`comp` + idx}></div>
+
+    });
     return (
-        <div className="flex min-h-full items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
-            <h1 className="text-3xl font-bold underline">
-                Hello world!
-            </h1>
-        </div >
+        <>
+            <div className='board'>{compSquares}</div>
+            <div className="playercard position-releative">
+                <div class="position-absolute top-50 start-50 translate-middle">
+                    <span>00</span>
+                    <hr />
+                    <span>
+                        Player 1F
+                    </span>
+                </div>
+            </div>
+        </>
     );
 }
 
