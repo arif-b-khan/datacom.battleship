@@ -1,0 +1,14 @@
+.ship {
+  border: 1px solid red;
+  max-height: 30px;
+  img {
+    width: 150px;
+    height: 25px;
+  }
+}
+
+.ship-hit {
+  background-image: url("../../public/assets/Hit.png");
+  width: 20px;
+  height: 20px;
+}
