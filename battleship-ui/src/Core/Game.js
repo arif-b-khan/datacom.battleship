@@ -9,15 +9,29 @@ function Game() {
     });
     return (
         <>
-            <div className='board'>{compSquares}</div>
-            <div className="playercard position-releative">
-                <div class="position-absolute top-50 start-50 translate-middle">
-                    <span>00</span>
-                    <hr />
-                    <span>
-                        Player 1F
-                    </span>
+            <div className="d-xs-flex flex-xs-column d-sm-flex flex-sm-row-reverse justify-content-center">
+                <div className='board'>{compSquares}</div>
+                <div className="d-flex flex-row playercard-margin-top">
+                    <div className="playercard ">
+                        <div>
+                            <label>00</label>
+                            <hr />
+                            <label>
+                                Player 1
+                            </label>
+                        </div>
+                    </div>
+                    <div className="playercard teal-color">
+                        <div>
+                            <label>00</label>
+                            <hr />
+                            <label>
+                                Player 2
+                            </label>
+                        </div>
+                    </div>
                 </div>
+
             </div>
         </>
     );
