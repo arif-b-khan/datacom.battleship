@@ -14,76 +14,97 @@ code {
     monospace;
 }
 
-@include media-breakpoint-up(md) {
-  .board {
-    width: 400px;
-    height: 400px;
-    border: 5px solid var(--oc-yellow-5);
-    margin-top: 0.2em;
-    margin-right: 0.1em;
-    margin-left: 0.2em;
-    display: flex;
-    flex-wrap: wrap;
+header{
+  background-color: #9494ff;
+  .btn_grey{
+    &, &:hover{
+      background-color: #4a4a4a;
+    }
+  }
+  .btn_blue{
+    &, &:hover{
+      background-color: #7676b7;
+    }
+  }
+  .btn_grey,
+  .btn_blue{
+    border: none;
+    outline: none;
+    box-shadow: none;
   }
 }
 
-@include media-breakpoint-down(md) {
-  .board {
-    width: 100%;
-    height: 350px;
-    border: 0.5em solid var(--oc-yellow-5);
-    display: flex;
-    flex-wrap: wrap;
+.wrapper{
+  img{
+    max-width: 100%;
+    max-height: 100%;
   }
 }
 
-.board div {
-  width: 10%;
-  height: 10%;
-  box-sizing: border-box;
-  background: var(--oc-gray-1);
-  border: 1px solid var(--oc-gray-2);
-  cursor: crosshair;
-  transition: background-color 100ms ease-in-out;
-}
-
-.board .empty {
-  background-color: var(--oc-gray-1);
-}
-
-.board .empty:hover {
-  background-color: var(--oc-yellow-2);
-}
-
-.playercard {
-  width: 200px;
-  height: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: var(--oc-yellow-5);
+.board {
+  width: 100%;
+  border: 5px solid #ffb000;
   div {
-    width: 150px;
-    text-align: center;
-    hr {
-      margin: 0.5em 0 0.3em 0;
-    }
-    label:first-child {
-      font-weight: bold;
-      font-size: xx-large;
-    }
-    label:last-child {
-      font-size: small;
-      margin-bottom: 1em;
-    }
+    width: 10%;
+    padding-bottom: 10%;
+    box-sizing: border-box;
+    background: #f8f8f8;
+    border: 1px solid #979797;
+    cursor: crosshair;
+    transition: background-color 100ms ease-in-out;
   }
-}
-@include media-breakpoint-up(md) {
-  .playercard-margin-top {
-    margin: 0.2em 0 0 0;
+  .empty {
+    background-color: #f8f8f8;
+  }
+  .empty:hover {
+    background-color: #ffec99;
   }
 }
 
-.teal-color {
-  background-color: var(--oc-teal-7);
+.playercontainer{
+  width: 100%;
+  .playercard {
+    color: #4a4a4a;
+    .teal-color {
+      border: 1px solid #25b79f;
+      background-color: #25b79f;
+    }
+    .yellow-color {
+      border: 1px solid #25b79f;
+      background-color: #ffb000;
+    }
+    .teal-color, 
+    .yellow-color{
+      width: 50%;
+      h1{
+        font-size: 48px;
+        border-bottom: 1px solid #4a4a4a;
+      }
+    }
+  }
+
+  .playerpoint{
+    .ship_box, 
+    .point_box{
+      width: 50%;
+    }
+    .point_box img{
+      max-width: 20%;
+      padding: 3px;
+    }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .playerpoint > div{
+    width: 50%;
+  }
+}
+@include media-breakpoint-up(sm) {
+  .board {
+    max-width: 450px;
+  }
+  .playercontainer{
+    max-width: 300px;
+  }
 }

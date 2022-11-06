@@ -8,14 +8,18 @@ export const SHIP_TYPE = {
     carriership: 'carriership',
     cruisership: 'cruisership',
     submarine: 'submarine',
+    miss: 'miss',
+    hit: 'hit',
 };
 
 export const SHIP_TYPE_TO_PATH = {
     [SHIP_TYPE.aircraft]: '/assets/Aircraft Shape.png',
-    [SHIP_TYPE.battleship]: 'battleship',
-    [SHIP_TYPE.carriership]: 'carriership',
-    [SHIP_TYPE.cruisership]: 'cruisership',
-    [SHIP_TYPE.submarine]: 'submarine',
+    [SHIP_TYPE.battleship]: '/assets/Battleship Shape.png',
+    [SHIP_TYPE.carriership]: '/assets/Carrier Shape.png',
+    [SHIP_TYPE.cruisership]: '/assets/Cruiser Shape.png',
+    [SHIP_TYPE.submarine]: '/assets/Submarine Shape.png',
+    [SHIP_TYPE.miss]: '/assets/Miss small.png',
+    [SHIP_TYPE.hit]: '/assets/Hit small.png',
 };
 
 
